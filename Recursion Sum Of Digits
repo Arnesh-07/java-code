@@ -1,0 +1,12 @@
+class HelloWorld {
+    public static void main(String[] args) {
+        System.out.print(print(123));
+    }
+        public static int print(int n){
+            if(n==0){
+                return 0;
+            }
+            
+            return n%10+print(n/10);
+        }
+}
