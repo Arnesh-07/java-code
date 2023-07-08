@@ -1,0 +1,14 @@
+class HelloWorld {
+    public static void main(String[] args) {
+        int[] arr={1,2,3,4,5};
+        System.out.println(issort(0,arr));
+    }
+    public static boolean issort(int n,int[] arr)
+    {
+        if(n==arr.length-1)
+        {
+            return true;
+        }
+        return arr[n]<arr[n+1] && issort(n+1,arr);
+    }
+}
