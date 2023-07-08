@@ -1,0 +1,19 @@
+class HelloWorld {
+    public static void main(String[] args) {
+        int[] arr={1,2,3,4,5};
+        int target=2;
+        System.out.println(lsearch(target,arr,0));
+    }
+    public static int lsearch(int n,int[] arr,int i)
+    {
+        if(i==arr.length)
+        {
+            return -1;
+        }
+        if(arr[i]==n)
+        {
+            return i+1;
+        }
+        return lsearch(n,arr,i+1);
+    }
+}
