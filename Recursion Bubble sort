@@ -1,0 +1,29 @@
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+        int[] arr={1,3,4,5,2};
+        bubble(4,0,arr);
+        System.out.print(Arrays.toString(arr));
+    }
+    static void bubble(int n,int i,int[] arr)
+    {
+        if(n==0)
+        {
+            return;
+        }
+        if(n>i)
+        {
+            if(arr[i]>arr[i+1])
+            {
+                int temp=arr[i];
+                arr[i]=arr[i+1];
+                arr[i+1]=temp;
+            }
+            bubble(n,i+1,arr);
+        }
+        else{
+            bubble(n-1,0,arr);
+        }
+        
+    }
+}
